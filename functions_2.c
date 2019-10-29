@@ -30,13 +30,12 @@ int p_S(va_list list)
 			ch = str[i];
 			_putchar(92);
 			_putchar('x');
-			c += 2;
 			if (ch > 0 && ch < 16)
 			{
 				_putchar('0');
-				c++;
 			}
-			c += get_hex(ch, 0);
+			get_hex(ch, 0);
+			c++;
 		}
 		i++;
 	}
