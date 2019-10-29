@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdint.h>
 #include "holberton.h"
 
 /**
@@ -66,6 +67,28 @@ int p_r(va_list list)
 		_putchar(str[i]);
 		t++;
 		i--;
+	}
+
+	return (t);
+}
+
+/**
+ * p_a - entry point
+ * @list: va_list variable
+ *
+ * Return: int variable
+*/
+
+int p_a(va_list list)
+{
+	void *str = va_arg(list, void *);
+	uintptr_t p = (uintptr_t)str;
+	int i = sizeof(p) * 4, t = 0;
+
+	while (i >= 0)
+	{
+		t += get_hex(p, 0);
+		i -= 4;
 	}
 
 	return (t);

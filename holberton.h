@@ -25,6 +25,7 @@ int p_X(va_list list);
 int p_b(va_list list);
 int p_S(va_list list);
 int p_r(va_list list);
+int p_a(va_list list);
 int p_p(void);
 
 int print_number(long int n, int t);

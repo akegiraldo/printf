@@ -21,7 +21,7 @@ int iterator(const char *ft, va_list list, ptf *ops)
 		j = 0;
 		if (ft[i] == '%')
 		{
-			while (j < 11)
+			while (j < 12)
 			{
 				while (ft[i + 1] == ' ')
 					i++, b2 = 1;
@@ -67,7 +67,8 @@ int _printf(const char *ft, ...)
 		{'X', p_X},
 		{'b', p_b},
 		{'S', p_S},
-		{'r', p_r}
+		{'r', p_r},
+		{'p', p_a}
 	};
 
 	va_start(list, ft);
