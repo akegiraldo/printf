@@ -17,6 +17,8 @@ int p_S(va_list list)
 
 	while (str[i])
 	{
+		if (str == NULL)
+			return (-1);
 		if (str[i] > 32 && str[i] < 127)
 		{
 			_putchar(str[i]);
