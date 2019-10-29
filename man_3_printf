@@ -1,0 +1,116 @@
+.Dd 10/30/2019
+.Dt _Printf 3
+.Os GNU coreutils 8.30
+.Sh NAME
+.Nm _Printf - format and print data
+.Sh SYNOPSIS
+.Xr _printf "''FORMAT'', arg0, arg1, ..."
+.Sh DESCRIPTION
+Print ARGUMENT(s) according to FORMAT
+
+
+FORMAT controls the output as in C printf. Interpreted sequences are:
+
+
+.Pp
+1. Sequences not created by us and interpreted by code ascii the shell:
+.Bl -tag -width -indent
+.It \e"
+double quote
+.It \e\e
+backslash
+.It \ea
+alert (BEL)
+.It \eb
+backspace
+.It \ec
+produce no further output
+.It \ee
+escape
+.It \ef
+form feed
+.It \en
+new line
+.It \er
+carriage return
+.It \et
+horizontal tab
+.It \ev
+vertical tab
+
+
+.It
+2. Sequences created by the authors:
+
+
+.It %%
+a single %
+.It %s
+print the ARGUMENT of type String
+.It %c
+print the ARGUMENT of type Char
+.It %d
+print the ARGUMENT of type Integer
+.It %i
+print the ARGUMENT of type Integer
+.It %b
+Positive integer ARGUMENT is converted and printed in binary code
+.It %u
+print the ARGUMENT of type unsigned int
+.It %o
+Positive integer ARGUMENT is converted and printed in octal base
+.It %x
+Positive integer ARGUMENT is converted and printed in lower case in hexadecimal basis
+.It %X
+Positive integer ARGUMENT is converted and printed in upper case in hexadecimal basis
+
+
+.Sh EXAMPLES
+Some examples of using printf and its console output.
+.Bl -tag -width -indent
+
+_printf("%%");
+
+> %
+
+_printf("%s", "Hello, world!");
+
+> Hello, world!
+
+_printf("%c", 'H');
+
+> H
+
+_printf("%d", 10);
+
+> 10
+
+_printf("%i", 10);
+
+> 10
+
+_printf("%b", 10);
+
+> 1010
+
+_printf("%o", 10);
+
+> 12
+
+_printf("%x", 10);
+
+> a
+
+_printf("%X", 10);
+
+> A
+
+_printf("La %s %c%C para %s%c%c%c%s robot.\n", "política", 'e', 's', "marionetas", '.', 32, 45, "Mr");
+
+> La política es para marionetas. -Mr robot.
+
+.Sh AUTHORS
+Written by
+.Bl -tag -width -indent
+.It Pa Santiago Aldana
+.It Pa Kevin Adrián Giraldo
