@@ -36,3 +36,22 @@
  - As a consequence, be careful not to push any c file containing a `main` function in the root directory of your project (you could have a `test` folder containing all your tests files including `main` functions)
  - Our main files will include your main header file (`holberton.h`): `#include holberton.h`
  - You might want to look at the gcc flag `-Wno-format` when testing with your `_printf` and the standard `printf`. Example of test file that you could use:
+
+### DESCRIPTION
+* Print ARGUMENT(s) according to FORMAT
+
+
+### EXAMPLES
+* Some examples of using printf and its console output.
+
+ - _printf("%%");
+ - > %
+ - _printf("%s", "Hello, world!");
+ - > Hello, world!
+ - _printf("La %s %c%C para %s%c%c%c%s robot.\n", "política", 'e', 's', "marionetas", '.', 32, 45, "Mr");
+ - > La política es para marionetas. -Mr robot.
+
+## Authors
+
+* **Santiago Aldana** - *Initial work* - [PurpleBooth](https://github.com/paisap)
+* **Kevin Adrian Giraldo** - *Initial work* - [PurpleBooth](https://github.com/Doouh)
