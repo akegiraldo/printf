@@ -15,10 +15,11 @@ int p_S(va_list list)
 	int i = 0, c = 0;
 	unsigned char ch;
 
+	if (str == NULL)
+		return (-1);
+
 	while (str[i])
 	{
-		if (str == NULL)
-			return (-1);
 		if (str[i] > 32 && str[i] < 127)
 		{
 			_putchar(str[i]);
