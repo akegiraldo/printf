@@ -20,6 +20,7 @@ int p_S(va_list list)
 		if (str[i] > 32 && str[i] < 127)
 		{
 			_putchar(str[i]);
+			c++;
 		}
 		else
 		{
@@ -27,18 +28,16 @@ int p_S(va_list list)
 			_putchar(92);
 			_putchar('x');
 			c += 2;
-			printf("\n  %d  \n", ch);
 			if (ch > 0 && ch < 16)
 			{
 				_putchar('0');
+				c++;
 			}
-			else
-				i++;
 			c += get_hex(ch, 0);
 		}
 		i++;
 	}
-	return (i + c);
+	return (c);
 }
 
 /**
