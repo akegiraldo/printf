@@ -47,7 +47,6 @@ int p_S(va_list list)
  *
  * @Return: int variable
 */
-
 int p_r(va_list list)
 {
 	char *str = va_arg(list, char *);
@@ -65,7 +64,6 @@ int p_r(va_list list)
 		t++;
 		i--;
 	}
-	//_putchar('\0');
 
 	return (t);
 }
