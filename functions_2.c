@@ -45,8 +45,9 @@ int p_S(va_list list)
  * p_r - entry point
  * @list: va_list variable
  *
- * @Return: int variable
+ * Return: int variable
 */
+
 int p_r(va_list list)
 {
 	char *str = va_arg(list, char *);
