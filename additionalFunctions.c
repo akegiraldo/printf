@@ -60,7 +60,7 @@ int get_octal(unsigned int n)
  * Return: i
 */
 
-int get_hex(unsigned int n, int p)
+int get_hex(unsigned long int n, int p)
 {
 	int tmp = 0, i = 0, j, plus;
 	char hex[100];

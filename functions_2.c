@@ -81,15 +81,19 @@ int p_r(va_list list)
 
 int p_a(va_list list)
 {
-	void *str = va_arg(list, void *);
-	uintptr_t p = (uintptr_t)str;
-	int i = sizeof(p) * 4, t = 0;
+	unsigned long int str = va_arg(list, unsigned long int), t = 0;
+	char *nil = "(nil)";
+	int i = 0;
 
-	while (i >= 0)
+	if (str == 0)
 	{
-		t += get_hex(p, 0);
-		i -= 4;
+		while (nil[i])
+			_putchar(nil[i]), i++;
+		return (i);
 	}
-
+	_putchar('0');
+	_putchar('x');
+	t = get_hex(str, 1);
+	t += 2;
 	return (t);
 }

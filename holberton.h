@@ -30,6 +30,6 @@ int p_p(void);
 
 int print_number(long int n, int t);
 int get_octal(unsigned int n);
-int get_hex(unsigned int n, int p);
+int get_hex(unsigned long int n, int p);
 int get_bin(unsigned int n, int t);
 #endif
