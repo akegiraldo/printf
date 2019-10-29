@@ -82,6 +82,8 @@ int p_r(va_list list)
 int p_a(va_list list)
 {
 	void *str = va_arg(list, void *);
+	if (str == NULL)
+		return (-1);
 	uintptr_t p = (uintptr_t)str;
 	int i = sizeof(p) * 4, t = 0;
 
