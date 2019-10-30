@@ -34,8 +34,6 @@ int iterator(const char *ft, va_list list, ptf *ops)
 				j++;
 			}
 		}
-		if (b2 == 1 && ft[i] == ' ')
-			_putchar('%'), b2 = 0, cont++;
 		if (b == 0 && ft[i] != '\0' && b3 == 0)
 			_putchar(ft[i]), cont++, i++;
 		b = 0, b3 = 0;
