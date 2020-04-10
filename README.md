@@ -1,4 +1,4 @@
-# 0x11. C - printf
+# printf
 
 ## Description
 * Print ARGUMENT(s) according to FORMAT
